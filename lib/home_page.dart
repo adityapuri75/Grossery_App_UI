@@ -23,6 +23,26 @@ class _HomePageState extends State<HomePage> {
             MainText(),
             SizedBox(height: 20,),
             SearchBar(),
+            SizedBox(height: 20,),
+            //////////////////////////////////////////////
+            Padding(
+              padding: const EdgeInsets.only(right: 25),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Categories',style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.bold),),
+                  Row(
+                    children: [
+                      Text("View All",style: TextStyle(color: Color(0xff5a6289),fontSize: 16),),
+                      Icon(Icons.navigate_next,color: Colors.white,size: 30,)
+                    ],
+                  )
+                ],
+              ),
+            ),
+            ///////////////////////////////////////////////////
+            SizedBox(height: 20,),
+            Category(),
           ],
         ),
       ),
