@@ -47,7 +47,7 @@ class MainText extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text("Hey, Paul",style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),),
-          SizedBox(height: 20,),
+          SizedBox(height: 15,),
           Text("Find your daily Goods here",style: TextStyle(fontSize: 18,color: Color(0xff5a6289)),)
 
         ],
@@ -226,4 +226,156 @@ class _CategoryState extends State<Category> {
     );
   }
 }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+class TopSelling extends StatefulWidget {
+  @override
+  _TopSellingState createState() => _TopSellingState();
+}
+
+class _TopSellingState extends State<TopSelling> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 230,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(right: 20),
+            child: Container(
+              width: 180,
+              decoration: BoxDecoration(
+                color: Color(0xff444d88),
+                borderRadius: BorderRadius.circular(15)
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10,left: 15,right: 15,),
+                    child: Image(image: AssetImage("assets/green-cabbage.png"),),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20,top: 10),
+                    child: Text("Green Cabbage",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.bold),),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Text("\$12.0 / Kg",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.bold),),
+                  ),
+                  Align(
+                    alignment: Alignment.bottomRight,
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 10,top: 3),
+                      child: Container(
+                        height: 30,
+                        width: 30,
+                        decoration: BoxDecoration(
+                          color: Color(0xff37d58b),
+                          borderRadius: BorderRadius.circular(15)
+                        ),
+                        child: Icon(Icons.add,color: Colors.white,),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 20),
+            child: Container(
+              width: 180,
+              decoration: BoxDecoration(
+                  color: Color(0xff444d88),
+                  borderRadius: BorderRadius.circular(15)
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10,left: 15,right: 15,),
+                    child: Image(image: AssetImage("assets/potato.png"),),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20,top: 10),
+                    child: Text("Green Cabbage",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.bold),),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Text("\$12.0 / Kg",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.bold),),
+                  ),
+                  Align(
+                    alignment: Alignment.bottomRight,
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 10,top:20),
+                      child: Container(
+                        height: 30,
+                        width: 30,
+                        decoration: BoxDecoration(
+                            color: Color(0xff37d58b),
+                            borderRadius: BorderRadius.circular(15)
+                        ),
+                        child: Icon(Icons.add,color: Colors.white,),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+
+            ),
+          ),
+
+          Container(
+            width: 180,
+            decoration: BoxDecoration(
+                color: Color(0xff444d88),
+                borderRadius: BorderRadius.circular(15)
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 15,right: 15,),
+                  child: Image(image: AssetImage("assets/blackCoffe.png"),),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Text("Green Cabbage",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.bold),),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Text("\$12.0 / Kg",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.bold),),
+                ),
+                Align(
+                  alignment: Alignment.bottomRight,
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 10,bottom: 0),
+                    child: Container(
+                      height: 30,
+                      width: 30,
+                      decoration: BoxDecoration(
+                          color: Color(0xff37d58b),
+                          borderRadius: BorderRadius.circular(15)
+                      ),
+                      child: Icon(Icons.add,color: Colors.white,),
+                    ),
+                  ),
+                )
+              ],
+            ),
+
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 
