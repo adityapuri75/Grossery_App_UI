@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_part_3/Pages/product_page.dart';
 
 class CustomAppBar extends StatelessWidget {
   @override
@@ -247,45 +248,50 @@ class _TopSellingState extends State<TopSelling> {
         children: [
           Padding(
             padding: const EdgeInsets.only(right: 20),
-            child: Container(
-              width: 180,
-              decoration: BoxDecoration(
-                color: Color(0xff444d88),
-                borderRadius: BorderRadius.circular(15)
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 10,left: 15,right: 15,),
-                    child: Image(image: AssetImage("assets/green-cabbage.png"),),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20,top: 10),
-                    child: Text("Green Cabbage",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.bold),),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20),
-                    child: Text("\$12.0 / Kg",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.bold),),
-                  ),
-                  Align(
-                    alignment: Alignment.bottomRight,
-                    child: Padding(
-                      padding: const EdgeInsets.only(right: 10,top: 3),
-                      child: Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                          color: Color(0xff37d58b),
-                          borderRadius: BorderRadius.circular(15)
-                        ),
-                        child: Icon(Icons.add,color: Colors.white,),
-                      ),
+            child: InkWell(
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Product_Page1()));
+              },
+              child: Container(
+                width: 180,
+                decoration: BoxDecoration(
+                  color: Color(0xff444d88),
+                  borderRadius: BorderRadius.circular(15)
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10,left: 15,right: 15,),
+                      child: Image(image: AssetImage("assets/green-cabbage.png"),),
                     ),
-                  )
-                ],
-              ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20,top: 10),
+                      child: Text("Green Cabbage",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.bold),),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: Text("\$12.0 / Kg",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.bold),),
+                    ),
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 10,top: 3),
+                        child: Container(
+                          height: 30,
+                          width: 30,
+                          decoration: BoxDecoration(
+                            color: Color(0xff37d58b),
+                            borderRadius: BorderRadius.circular(15)
+                          ),
+                          child: Icon(Icons.add,color: Colors.white,),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
 
+              ),
             ),
           ),
           Padding(
