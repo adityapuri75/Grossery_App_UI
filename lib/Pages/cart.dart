@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_part_3/Pages/checkout.dart';
 
 import '../home_page.dart';
 
@@ -245,13 +246,18 @@ class _CartState extends State<Cart> {
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.only(left: 10,bottom: 30,right: 10),
-        child: Container(
-          height: 60,
-          decoration: BoxDecoration(
-            color: Colors.green,
-            borderRadius: BorderRadius.circular(15)
+        child: InkWell(
+          onTap: (){
+            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>CheckoutPage()));
+          },
+          child: Container(
+            height: 60,
+            decoration: BoxDecoration(
+              color: Colors.green,
+              borderRadius: BorderRadius.circular(15)
+            ),
+            child: Center(child: Text("Proceed To Payment",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),)),
           ),
-          child: Center(child: Text("Proceed To Payment",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),)),
         ),
       ),
     );
