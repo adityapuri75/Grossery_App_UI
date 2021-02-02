@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_part_3/Pages/checkout.dart';
+import 'package:ui_part_3/Pages/product_page.dart';
 
 import '../home_page.dart';
 
@@ -28,6 +29,7 @@ class _CartState extends State<Cart> {
                         Navigator.of(context).push(MaterialPageRoute(builder: (context)=>HomePage()));
                       },
                       child: Icon(Icons.arrow_back_ios,color: Colors.white,)),
+                  Text("My Cart",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
                   Container(
                     height: 35,
                     width: 40,

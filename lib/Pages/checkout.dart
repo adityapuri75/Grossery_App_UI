@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ui_part_3/Pages/Payment_details.dart';
+import 'package:ui_part_3/Pages/cart.dart';
 
 import '../home_page.dart';
 
@@ -18,9 +20,10 @@ class CheckoutPage extends StatelessWidget {
                 children: [
                   InkWell(
                       onTap: (){
-                        Navigator.of(context).push(MaterialPageRoute(builder: (context)=>HomePage()));
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Cart()));
                       },
                       child: Icon(Icons.arrow_back_ios,color: Colors.white,)),
+                  Text("Checkout",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
                   Container(
                     height: 35,
                     width: 40,
@@ -118,14 +121,19 @@ class CheckoutPage extends StatelessWidget {
             ),
             SizedBox(height: 60,),
 
-            Container(
-              height: 60 ,
-              width: 135,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: Colors.green
+            InkWell(
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>PaymentMessage()));
+              },
+              child: Container(
+                height: 60 ,
+                width: 135,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: Colors.green
+                ),
+                child: Center(child: Text("Buy",style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),)),
               ),
-              child: Center(child: Text("Buy",style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),)),
             )
           ],
         ),

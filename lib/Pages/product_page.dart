@@ -115,19 +115,24 @@ class _Product_Page1State extends State<Product_Page1> {
               style: TextStyle(fontSize: 15)
             )),
             SizedBox(height: 40,),
-            Container(
-              height: 65,
-              decoration: BoxDecoration(
-                color: Colors.green,
-                borderRadius: BorderRadius.circular(15)
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.shopping_cart,color: Colors.white,),
-                  SizedBox(width: 10,),
-                  Text("Add To Cart",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),)
-                ],
+            InkWell(
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Cart()));
+              },
+              child: Container(
+                height: 65,
+                decoration: BoxDecoration(
+                  color: Colors.green,
+                  borderRadius: BorderRadius.circular(15)
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.shopping_cart,color: Colors.white,),
+                    SizedBox(width: 10,),
+                    Text("Add To Cart",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),)
+                  ],
+                ),
               ),
             )
           ],
